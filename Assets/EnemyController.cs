@@ -10,7 +10,7 @@ public class EnemyController : MonoBehaviour
    public LayerMask whatIsGround, whatIsPlayer;
     public float health;
     public int damage;
-    public GameObject projectile;
+    // public GameObject projectile;
 
     //Animations
     public Animator anim;
@@ -92,10 +92,10 @@ public class EnemyController : MonoBehaviour
         if (!alreadyAttacked)
         {
             // Attack Code here
-            Rigidbody rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
+           // Rigidbody rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
 
-            rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
-            rb.AddForce(transform.up * 8f, ForceMode.Impulse);
+           // rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
+            // rb.AddForce(transform.up * 8f, ForceMode.Impulse);
 
             anim.SetBool("IsAttacking", true);
             
